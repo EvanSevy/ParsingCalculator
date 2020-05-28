@@ -295,7 +295,7 @@
             this.Controls.Add(this.button1);
             this.MinimumSize = new System.Drawing.Size(1600, 56);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Parsing Calculator";
             this.ResumeLayout(false);
 
         }

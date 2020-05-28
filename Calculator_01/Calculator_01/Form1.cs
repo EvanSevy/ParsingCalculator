@@ -8,6 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+//***************
+// Evan Sevy
+// Circa 2016
+// 
+// An app to calculate addition, subtraction, multiplication, division and parentheses
+// Gets a string after using the gui calculator and runs it through some parsing calculations to get a valid result.
+//***************
+
 namespace Calculator_01
 {
     public partial class Form1 : Form
@@ -134,11 +142,12 @@ namespace Calculator_01
     
 
 
-
-// Go from higher precedence to lower precedence (Parentheses, multipliction, etc...)
-// With parentheses, Find the first openning parentheses, then see if anymore open parentheses, until you find a closing parentheses 
+//*********************************************
+// Go from higher precedence to lower precedence (Parentheses, multipliction, addition, etc...)
+// With parentheses, Find the first openning parentheses, then see if there's anymore open parentheses, until you find a closing parentheses 
     // Then check for as many closing parentheses as you have open parentheses
     // Successively solve each enclosed parentheses, returning a value from the calculation and putting it back into the line of the rest of the calculation
+//*********************************************
 
 // Just counts each type of paren, closing & openning, then makes sure they equal the same
         public static Boolean validParens(List<String> calculation)
@@ -161,7 +170,7 @@ namespace Calculator_01
             else
                 return true;
         }
-// Right now, it's just making sure that multiplication is innacted on implicit multiplication calculations 
+// Right now, this is making sure that multiplication is innacted on 'implicit' multiplication calculations 
 // (ie. when a number is multiplied by the result of a paren calculation)
         public static List<String> cleanCalculation(List<String> theCalc)
         {
